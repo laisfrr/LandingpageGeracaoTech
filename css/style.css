@@ -2,12 +2,14 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 :root{
     --cor-primaria:#0a243e;
-    --cor-texto:#ffffff;
+    --cor-branca:#ffffff;
+    --cor-destaque:#e74c3c;
+    --cor-textos:#333333;
 }
 
 .cabecalho{
@@ -18,6 +20,7 @@
 .navbar{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 1rem;
 }
 
@@ -37,13 +40,15 @@
 
 .navbar-links>li>a{
     text-decoration: none;
-    color:var(--cor-texto);
+    color:var(--cor-branca);
 }
 
 
 .banner-video-contain{
     height: calc(100vh - 92px);
     position: relative;
+    overflow: hidden; 
+    border: none !important; 
 }
 
 .banner-video-contain video{
@@ -51,8 +56,10 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-
+    border: none !important; 
 }
+
+
 
 .banner-titulo{
     position: absolute;
@@ -60,7 +67,7 @@
     top: 60%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    color: var(--cor-texto); 
+    color: var(--cor-branca); 
     z-index: 1; 
     padding: 0 20px; 
 }
@@ -77,10 +84,71 @@
 
 .banner-botao{
     display: inline-block;
-    color: var(--cor-texto);
+    color: var(--cor-branca);
     text-decoration: none;
     background-color:var(--cor-primaria);
     padding: 12px 32px;
     border-radius: 4px;
 }
 
+.sobre-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:4rem 0;
+}
+
+
+.sobre-contain>h2{
+    font-size: 40px;
+    margin-bottom: 32px;
+    color: var(--cor-primaria);
+}
+
+.sobre-conteudo{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+    
+}
+
+.sobre-conteudo>img{
+    height: 250px;
+    border-radius: 8px;
+}
+
+
+
+.sobre-texto>h3{
+    font-size: 28px;
+    color: var(--cor-primaria);
+    margin-bottom: 23px;
+} 
+
+.sobre-texto>p{
+    margin-bottom: 16px;
+    line-height: 25px;
+    
+}
+
+.sobre-texto>p,ul{
+    color: var(--cor-textos);
+}
+
+.sobre-texto>ul{
+    list-style: none;
+}
+
+.sobre-texto>ul>li{
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.sobre-texto>ul>li::before{
+    content: '•';
+    color: var(--cor-destaque);
+    left: 0px;
+    position: absolute;
+}
