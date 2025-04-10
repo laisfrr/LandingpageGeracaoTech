@@ -10,6 +10,7 @@
     --cor-branca:#ffffff;
     --cor-destaque:#e74c3c;
     --cor-textos:#333333;
+    --cor-fundo:#f9f9f9;
 }
 
 .cabecalho{
@@ -151,4 +152,49 @@
     color: var(--cor-destaque);
     left: 0px;
     position: absolute;
+}
+
+.conteudo-contain{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    height: 60vh;
+    padding:4rem 0;
+}
+
+.conteudo-contain>h2{
+    font-size: 40px;
+    color: var(--cor-primaria);
+    margin-bottom: 32px;
+}
+
+
+.conteudo-cards{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cards-html,.cards-css{
+    background-color: var(--cor-branca);
+    padding: 24px;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cards-html>h3,p,.cards-css>h3,p{
+    margin-bottom: 16px;
+}
+
+.cards-html>h3,.cards-css>h3{
+    font-size:1.8rem;
+    color: var(--cor-primaria);
+}
+
+.cards-html>p,.cards-css>p{
+    color: var(--cor-textos);
 }
