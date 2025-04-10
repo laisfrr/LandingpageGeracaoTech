@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecalho{
+    background-color: #0a243e;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.navbar-logo{
+    width: 150px;
+}
+
+.navbar-links{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-links>li{
+    list-style: none;
+}
+
+.navbar-links>li>a{
+    text-decoration: none;
+    color: white;
+}
+
+.banner-video-contain{
+    width: 100%;
+}
+
