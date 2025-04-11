@@ -45,6 +45,23 @@ body {
 .navbar-links > li > a {
   text-decoration: none;
   color: var(--cor-branca);
+  padding: 8px 0;
+  position: relative;
+}
+
+.navbar-links > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-links > li > a:hover::after {
+  width: 100%;
 }
 
 .banner-video-contain {
@@ -316,6 +333,23 @@ p {
 .rodape-links {
   text-decoration: none;
   color: var(--cor-branca);
+  position: relative;
+  padding: 8px 0;
+}
+
+.rodape-links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  transition: width 0.3s ease-in-out;
+}
+
+.rodape-links:hover::after {
+  width: 100%;
 }
 
 .rodape-copy {
